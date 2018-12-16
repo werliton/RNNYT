@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     title:{
         fontFamily: 'HelveticaNeue-CondensedBold',
         fontSize: 18,
-        color: globalStyle.HEADER_TEXT_COLOR,
+        color: globalStyles.HEADER_TEXT_COLOR,
         backgroundColor: `${globalStyle.BG_COLOR}99`
     }
 })
