@@ -19,7 +19,8 @@ import {
              author,
              date,
              location,
-             description
+             description,
+             onPress
          } = this.props
 
          const accentColor = globalStyles.ACCENT_COLORS[
@@ -29,6 +30,7 @@ import {
          return (
              <TouchableOpacity
                 style={style}
+                onPress={onPress}
              >
                 <View>
                     <Thumbnail
