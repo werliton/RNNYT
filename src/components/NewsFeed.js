@@ -25,6 +25,22 @@ export default class NewsFeed extends Component{
         }
     }
 
+    componentWillMount(){
+        this.refresh()
+    }
+
+    componentWillReceiveProps(nextProps){
+        this.setState({
+            dataSource: this.state.dataSource.cloneWithRows(nextProps.news)
+        })
+    }
+
+    refresh = () => {
+        if(this.props.loadNews){
+            this.props.loadNews()
+        }
+    }
+
     onModalOpen = (url) =>{
         this.setState({
             modalVisible:true,
@@ -95,7 +111,8 @@ export default class NewsFeed extends Component{
 
 NewsFeed.propTypes = {
     news: PropTypes.arrayOf(PropTypes.object),
-    listStyles: View.propTypes.style
+    listStyles: View.propTypes.style,
+    loadNews: PropTypes.func
 }
 
 NewsFeed.defaultProps = {
