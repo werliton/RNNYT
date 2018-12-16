@@ -11,7 +11,7 @@ import {
     <View>
         <View style={styles.row}>
             <SmallText>
-                {date.toLocaleDateString()}
+                {date}
             </SmallText>
             <SmallText>
                 {author}
@@ -31,7 +31,7 @@ import {
  }
 
  Byline.propTypes = {
-    date: PropTypes.instanceOf(Date).isRequired,
+    date: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     location: PropTypes.string
  }
