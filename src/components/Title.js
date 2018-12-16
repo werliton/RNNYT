@@ -5,10 +5,10 @@ import {
     Text
 } from 'react-native'
 import AppText from './AppText'
-import * as globalStyle from '../styles/global'
+import * as globalStyles from '../styles/global'
 
 const Title = ({ style, children }) =>{
-    <AppText style={[style.title, style]}>
+    <AppText style={[styles.title, style]}>
         {children}
     </AppText>
 }
