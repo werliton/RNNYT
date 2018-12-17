@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { 
     StyleSheet,
-    Image,
+    ImageBackground,
     View, ViewPropTypes
  } from 'react-native'
  import Title from './Title'
@@ -14,7 +14,7 @@ const Thumbnail = ({ url, titleText, accentColor, style }) => {
     const TitleComponent = <Title style={styles.title}>{titleText}</Title>
     return (
         <View style={[styles.container, { borderColor: accentColor }, style]}>
-            <Image
+            <ImageBackground
                 style={[styles.image]}
                 source={{
                     uri:url
@@ -23,7 +23,7 @@ const Thumbnail = ({ url, titleText, accentColor, style }) => {
                 <View style={[styles.image, imageStyle]}>
                     {TitleComponent}
                 </View>
-            </Image>
+            </ImageBackground>
         </View>
     )
  }

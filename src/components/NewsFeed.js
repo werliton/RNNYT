@@ -41,7 +41,7 @@ export default class NewsFeed extends Component{
         }
     }
 
-    onModalOpen = (url) =>{
+    onModalOpen(url){
         this.setState({
             modalVisible:true,
             modalUrl: url
@@ -86,7 +86,7 @@ export default class NewsFeed extends Component{
         const index = parseInt(rest[1], 10)
         return (
             <NewsItem
-                onPress={this.onModalOpen(rowData.url)}
+                onPress={() => this.onModalOpen(rowData.url)}
                 style={styles.newsItem}
                 index={index}
                 {...rowData}
