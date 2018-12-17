@@ -7,11 +7,11 @@ import {
 import AppText from './AppText'
 import * as globalStyles from '../styles/global'
 
-const Title = ({ style, children }) =>{
+const Title = ({ style, children }) => (
     <AppText style={[styles.title, style]}>
         {children}
     </AppText>
-}
+)
 
 Title.propTypes = {
     style: Text.propTypes.style,
