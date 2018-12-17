@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import { StyleSheet, Text } from 'react-native'
 import AppText from './AppText'
 
-const SmallText = ({ children, style, ...rest }) => {
+const SmallText = ({ children, style, ...rest }) => (
     <AppText style={[styles.small, style]} {...rest}>
         {children}
     </AppText>
-}
+)
 
 SmallText.propTypes = {
     children: PropTypes.node,

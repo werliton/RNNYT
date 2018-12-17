@@ -7,7 +7,7 @@ import {
  import SmallText from './SmallText'
  import * as globalStyles from '../styles/global'
 
- const Byline = ({ date, author, location }) => {
+ const Byline = ({ date, author, location }) => (
     <View>
         <View style={styles.row}>
             <SmallText>
@@ -28,7 +28,7 @@ import {
             ) : null
         }
     </View>
- }
+ )
 
  Byline.propTypes = {
     date: PropTypes.string.isRequired,
