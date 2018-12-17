@@ -5,6 +5,7 @@ import {
     TextInput,
     StyleSheet
 } from 'react-native'
+import NewsFeed from './NewsFeed'
 import * as globalStyles from '../styles/global'
 
 export default class Search extends Component {
@@ -16,21 +17,32 @@ export default class Search extends Component {
         }
     }
 
+    searchNews = text => {
+        this.setState({searchText: text})
+        this.props.searchNews(text)
+    }
+
    render() {
      return (
        <View style={globalStyles.COMMON_STYLES.pageContainer}>
            <View style={styles.search}>
                <TextInput 
                 style={styles.input}
-                onChange={text => this.setState({searchText: text})}
+                onChange={this.searchNews}
                 value={this.state.searchText}
                 placeholder={'Search'}
                 placeholderTextColor={globalStyles.MUTED_COLOR}
                />
            </View>
+           <NewsFeed news={this.props.filteredNews} listStyles={{}} />
        </View>
      )
    }
+}
+
+Search.propTypes = {
+    filteredNews: PropTypes.arrayOf(PropTypes.object),
+    searchNews: PropTypes.func.isRequired
 }
 
 const styles = StyleSheet.create({
