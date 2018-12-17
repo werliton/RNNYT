@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { 
     View,
     TouchableOpacity,
-    StyleSheet
+    StyleSheet, ViewPropTypes
  } from 'react-native'
  import Byline from './Byline'
  import AppText from './AppText'
@@ -65,7 +65,7 @@ import {
      location: PropTypes.string,
      index: PropTypes.number.isRequired,
      onPress: PropTypes.func.isRequired,
-     style: View.propTypes.style
+     style: ViewPropTypes.style
  }
 
  const styles = StyleSheet.create({

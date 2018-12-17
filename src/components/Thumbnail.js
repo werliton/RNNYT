@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { 
     StyleSheet,
     Image,
-    View
+    View, ViewPropTypes
  } from 'react-native'
  import Title from './Title'
 
@@ -29,7 +29,7 @@ const Thumbnail = ({ url, titleText, accentColor, style }) => {
  }
 
  Thumbnail.propTypes = {
-     style: View.propTypes.style,
+     style: ViewPropTypes.style,
      url: PropTypes.string.isRequired,
      titleText: PropTypes.string,
      accentColor: PropTypes.string.isRequired

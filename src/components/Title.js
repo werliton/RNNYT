@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         fontFamily: 'HelveticaNeue-CondensedBold',
         fontSize: 18,
         color: globalStyles.HEADER_TEXT_COLOR,
-        backgroundColor: `${globalStyle.BG_COLOR}99`
+        backgroundColor: `${globalStyles.BG_COLOR}99`
     }
 })
 

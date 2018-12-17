@@ -6,7 +6,7 @@ import {
     View,
     Modal,
     TouchableOpacity,
-    WebView
+    WebView, ViewPropTypes
  } from 'react-native'
  import * as globalStyles from '../styles/global'
 import NewsItem from './NewsItem';
@@ -111,7 +111,7 @@ export default class NewsFeed extends Component{
 
 NewsFeed.propTypes = {
     news: PropTypes.arrayOf(PropTypes.object),
-    listStyles: View.propTypes.style,
+    listStyles: ViewPropTypes.style,
     loadNews: PropTypes.func
 }
 
