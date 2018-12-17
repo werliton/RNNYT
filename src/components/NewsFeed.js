@@ -23,6 +23,7 @@ export default class NewsFeed extends Component{
             dataSource: this.ds.cloneWithRows(props.news),
             modalVisible: false
         }
+
     }
 
     componentWillMount(){
@@ -41,7 +42,7 @@ export default class NewsFeed extends Component{
         }
     }
 
-    onModalOpen(url){
+    onModalOpen = url => {
         this.setState({
             modalVisible:true,
             modalUrl: url
@@ -54,7 +55,7 @@ export default class NewsFeed extends Component{
         })
     }
 
-    renderModal(){
+    renderModal = () => {
         return (
             <Modal
                 animationType="slide"
@@ -82,11 +83,11 @@ export default class NewsFeed extends Component{
         )
     }
 
-    renderRow(rowData, ...rest){
+    renderRow = (rowData, ...rest) => {
         const index = parseInt(rest[1], 10)
         return (
             <NewsItem
-                onPress={() => this.onModalOpen(rowData.url)}
+                onPress={ () => this.onModalOpen(rowData.url)}
                 style={styles.newsItem}
                 index={index}
                 {...rowData}
